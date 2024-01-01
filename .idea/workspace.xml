@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" />
+=======
+    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="random test Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 1216404 (Second Commit)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +97,39 @@
       <option name="presentableId" value="Default" />
       <updated>1703521160947</updated>
       <workItem from="1703521161981" duration="2679000" />
+<<<<<<< HEAD
       <workItem from="1703876624663" duration="4539000" />
+=======
+      <workItem from="1703876624663" duration="6400000" />
+      <workItem from="1703891019869" duration="1233000" />
+      <workItem from="1703937615369" duration="803000" />
+>>>>>>> 1216404 (Second Commit)
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1703937897553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703937897553</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1703937935034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703937935034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="random test Commit">
+      <option name="closed" value="true" />
+      <created>1703938411455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703938411455</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,8 +146,15 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="random test Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="random test Commit" />
+>>>>>>> 1216404 (Second Commit)
   </component>
 </project>
