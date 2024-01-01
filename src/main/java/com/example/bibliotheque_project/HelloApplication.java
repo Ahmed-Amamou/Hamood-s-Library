@@ -16,10 +16,17 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
-        primaryStage.setTitle("My Application");
+        Scene scene = new Scene(fxmlLoader.load(), 1080, 720,Color.BLACK);
+        primaryStage.setTitle("Minecraft");
         primaryStage.setScene(scene);
+<<<<<<< HEAD
         //I want to give this window an icon
+=======
+//        primaryStage.setAlwaysOnTop(true);
+        primaryStage.setResizable(false);
+        primaryStage.getFullScreenExitHint();
+//        I want to give this window an icon
+>>>>>>> b3279ba (some progress on the classes and database connections)
         primaryStage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
         primaryStage.show();
 
