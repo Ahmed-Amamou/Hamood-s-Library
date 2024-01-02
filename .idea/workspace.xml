@@ -4,37 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" />
-=======
-    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="random test Commit">
-=======
-    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Second Commit">
->>>>>>> fd8d9a1 (Created the main Database Schema)
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-=======
-    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Created the main Database Schema">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/Hamood.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/Hamood.xml" afterDir="false" />
->>>>>>> b3279ba (some progress on the classes and database connections)
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1216404 (Second Commit)
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloController.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Connections/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Connections/MySQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
->>>>>>> b3279ba (some progress on the classes and database connections)
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/hello-view.fxml" afterDir="false" />
->>>>>>> fd8d9a1 (Created the main Database Schema)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,38 +25,12 @@
       <entry key="054bd02d-06f6-45f6-89d6-28aa86ff6474" value="Green" />
     </colors>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7f930382-9cb2-4fe1-81dd-97b6dd0962bc" />
-        <option name="url" value="git@github.com:Ahmed-Amamou/Library-System-.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
+    &quot;associatedIndex&quot;: 6
+    }</component>
   <component name="ProjectId" id="2a2eZgi2uKnphJVrL47HtebFgm8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -86,40 +39,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/resources/com/example/bibliotheque_project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.49080458&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.MySQLConnection.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/resources/com/example/bibliotheque_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -129,9 +57,8 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.49080458",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true"
->>>>>>> fd8d9a1 (Created the main Database Schema)
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -143,9 +70,6 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.bibliotheque_project" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MySQLConnection">
@@ -182,13 +106,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-11.0.21-corretto-11.0.21-f644763e9732-97de7592" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -198,70 +115,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703521160947</updated>
       <workItem from="1703521161981" duration="2679000" />
-<<<<<<< HEAD
       <workItem from="1703876624663" duration="4539000" />
-=======
-      <workItem from="1703876624663" duration="6400000" />
-      <workItem from="1703891019869" duration="1233000" />
-<<<<<<< HEAD
-      <workItem from="1703937615369" duration="803000" />
->>>>>>> 1216404 (Second Commit)
-=======
-      <workItem from="1703937615369" duration="2514000" />
-      <workItem from="1703940631331" duration="716000" />
-      <workItem from="1703942119792" duration="1457000" />
-      <workItem from="1704027876332" duration="657000" />
-<<<<<<< HEAD
-      <workItem from="1704028955051" duration="4052000" />
->>>>>>> fd8d9a1 (Created the main Database Schema)
-=======
-      <workItem from="1704028955051" duration="6519000" />
-      <workItem from="1704068397061" duration="1000" />
-      <workItem from="1704109358253" duration="1000" />
-      <workItem from="1704129820511" duration="4384000" />
->>>>>>> b3279ba (some progress on the classes and database connections)
     </task>
-    <task id="LOCAL-00001" summary="First Commit">
-      <option name="closed" value="true" />
-      <created>1703937897553</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1703937897553</updated>
-    </task>
-    <task id="LOCAL-00002" summary="First Commit">
-      <option name="closed" value="true" />
-      <created>1703937935034</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1703937935034</updated>
-    </task>
-    <task id="LOCAL-00003" summary="random test Commit">
-      <option name="closed" value="true" />
-      <created>1703938411455</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1703938411455</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Second Commit">
-      <option name="closed" value="true" />
-      <created>1703939099942</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703939099942</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Created the main Database Schema">
-      <option name="closed" value="true" />
-      <created>1704034388606</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1704034388606</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,43 +127,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="dev" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-=======
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
-    <MESSAGE value="random test Commit" />
-<<<<<<< HEAD
-    <option name="LAST_COMMIT_MESSAGE" value="random test Commit" />
->>>>>>> 1216404 (Second Commit)
-=======
-    <MESSAGE value="Second Commit" />
-    <MESSAGE value="Created the main Database Schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the main Database Schema" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
->>>>>>> fd8d9a1 (Created the main Database Schema)
   </component>
 </project>

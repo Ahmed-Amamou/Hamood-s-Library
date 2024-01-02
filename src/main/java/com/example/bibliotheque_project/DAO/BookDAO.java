@@ -16,4 +16,9 @@ public interface BookDAO  {
     void updateBook(Book book);
     void deleteBook(int id);
 
+    //the next methods deal with the copies of the book
+    void increaseCopies(int bookId, int count);
+    void decreaseCopies(int bookId, int count);
+
+
 }

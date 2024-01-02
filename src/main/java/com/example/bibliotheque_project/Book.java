@@ -12,7 +12,7 @@ public class Book {
     private int ISBN;
     private int copiesAvailable;
 
-    public Book(int id, String author, String title, int ISBN,int copiesAvailable) {
+    public Book(int id, String title, String author,  int ISBN,int copiesAvailable) {
 
         this.id = id;
         this.author = author;
@@ -37,7 +37,7 @@ public class Book {
         return ISBN;
     }
 
-    public int getCopiesAvailable() {
+    public int getCopies() {
         return copiesAvailable;
     }
 
