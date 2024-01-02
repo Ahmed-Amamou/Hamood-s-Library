@@ -4,7 +4,7 @@
 
 package com.example.bibliotheque_project.DAO;
 
-import com.example.bibliotheque_project.Book;
+import com.example.bibliotheque_project.Models.Book;
 
 import java.util.List;
 

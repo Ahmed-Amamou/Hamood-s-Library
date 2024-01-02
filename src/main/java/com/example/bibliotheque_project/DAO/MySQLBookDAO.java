@@ -3,7 +3,7 @@
  */
 
 package com.example.bibliotheque_project.DAO;
-import com.example.bibliotheque_project.Book;
+import com.example.bibliotheque_project.Models.Book;
 import com.example.bibliotheque_project.Connections.MySQLConnection;
 
 import java.sql.Connection;

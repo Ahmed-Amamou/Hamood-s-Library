@@ -3,7 +3,7 @@
  * Copyright (c) 2024. made by Ahmed AMAMOU.
  */
 
-package com.example.bibliotheque_project;
+package com.example.bibliotheque_project.Models;
 
 public class Book {
     private int id;
