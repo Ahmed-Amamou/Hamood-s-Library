@@ -2,7 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-/src/main/java/com/example/bibliotheque_project/Connections/MySQLConnection.java
+src/main/java/com/example/bibliotheque_project/Connections/MySQLConnection.java
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
