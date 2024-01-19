@@ -15,8 +15,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1080, 720,Color.BLACK);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Views/Home.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
         primaryStage.setTitle("Minecraft");
         primaryStage.setScene(scene);
 

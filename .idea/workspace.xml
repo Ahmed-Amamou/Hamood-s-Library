@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Implemented MySQLReaderDAO methods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,14 @@
     <colors>
       <entry key="054bd02d-06f6-45f6-89d6-28aa86ff6474" value="Green" />
     </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,46 +48,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.MySQLConnection.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/resources/com/example/bibliotheque_project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.49080458",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MySQLConnection.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/java/com/example/bibliotheque_project/Models&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.49080458&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\com\example\bibliotheque_project\Models" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\com\example\bibliotheque_project" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project\Views" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\Views\Home" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.bibliotheque_project" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MySQLConnection">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.bibliotheque_project.HelloApplication" />
       <module name="Bibliotheque_Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.bibliotheque_project.*" />
+          <option name="PATTERN" value="com.example.bibliotheque_project.Models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MySQLConnection" />
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.MySQLConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +138,30 @@
       <updated>1703521160947</updated>
       <workItem from="1703521161981" duration="2679000" />
       <workItem from="1703876624663" duration="4539000" />
+      <workItem from="1704234356729" duration="1914000" />
+      <workItem from="1704468818239" duration="1541000" />
+      <workItem from="1704619445319" duration="25000" />
+      <workItem from="1704743590896" duration="1197000" />
+      <workItem from="1705682663222" duration="689000" />
+      <workItem from="1705683366123" duration="2945000" />
     </task>
+    <task id="LOCAL-00001" summary="Organized Directory, Added Reader class related stuff">
+      <option name="closed" value="true" />
+      <created>1704235032792</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704235032792</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implemented MySQLReaderDAO methods">
+      <option name="closed" value="true" />
+      <created>1704235659120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704235659120</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +177,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Organized Directory, Added Reader class related stuff" />
+    <MESSAGE value="Implemented MySQLReaderDAO methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented MySQLReaderDAO methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

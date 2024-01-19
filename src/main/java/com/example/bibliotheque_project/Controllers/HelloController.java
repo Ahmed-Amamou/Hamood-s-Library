@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2023. Bro This is my work please don't steal lol.
+ * Copyright (c) 2023-2024. made by Ahmed AMAMOU.
  */
 
-package com.example.bibliotheque_project;
+package com.example.bibliotheque_project.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -18,7 +18,7 @@ public class HelloController {
         testText.setText("You Clicked the test button!");
     }
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onMahmoudButtonClick() {
         welcomeText.setText("Mahmoud nab effectivement!");
     }
 
