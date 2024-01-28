@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLReaderDAO implements ReaderDAO{
@@ -38,7 +39,7 @@ public class MySQLReaderDAO implements ReaderDAO{
 
     @Override
     public List<Reader> findAllReaders() {
-        List<Reader> readers = null;
+        List<Reader> readers = new ArrayList<>(); // Initialize the list
         String query = "SELECT * FROM reader";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)){
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -55,6 +56,7 @@ public class MySQLReaderDAO implements ReaderDAO{
         }
         return readers;
     }
+
 
     @Override
     public void insertReader(Reader reader) {

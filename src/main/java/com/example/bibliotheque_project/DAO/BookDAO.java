@@ -10,15 +10,15 @@ import java.util.List;
 
 public interface BookDAO  {
     Book findBookById(int id);
-
+    Book findBookByISBN(String ISBN);
     List<Book> findAllBooks();
     void insertBook(Book book);
     void updateBook(Book book);
     void deleteBook(int id);
-
+    boolean bookExists(String ISBN);
     //the next methods deal with the copies of the book
-    void increaseCopies(int bookId, int count);
-    void decreaseCopies(int bookId, int count);
+    void increaseCopies(String bookISBN, int count);
+    void decreaseCopies(String bookISBN, int count);
 
 
 }

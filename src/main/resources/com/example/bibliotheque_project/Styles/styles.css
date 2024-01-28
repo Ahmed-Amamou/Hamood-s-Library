@@ -1,0 +1,74 @@
+/*
+ * Copyright (c) 2024. made by Ahmed AMAMOU.
+ */
+
+.styled-button {
+    -fx-background-color: transparent ; /* Blue ish background */
+    -fx-text-fill: white; /* White text */
+
+}
+.styled-button:hover {
+    -fx-background-color: #D7BA89; /* Darker green on hover */
+    -fx-cursor: hand; /* Change cursor to a hand */
+}
+/* Apply styling to the ImageView */
+.imagess {
+    -fx-fit-width: 300px;   /* Set the width of the image */
+    -fx-fit-height: 300px;  /* Set the height of the image */
+    -fx-preserve-ratio: true;  /* Preserve the aspect ratio of the image */
+    -fx-effect: dropshadow(three-pass-box, #333, 10, 0, 0, 0); /* Add drop shadow */
+    -fx-opacity: 0.9;       /* Set the opacity of the image */
+    /*-fx-rotate: 45;         !* Rotate the image by 45 degrees *!*/
+    /* Add more styling properties as needed */
+}
+
+/* Apply styling to the parent container of the ImageView (if needed) */
+.container {
+    -fx-background-color: #ececec;  /* Set background color */
+    -fx-padding: 10;                /* Set padding */
+}
+/* Apply styling to the TextArea */
+.text-area {
+    -fx-font-size: 14px;      /* Set font size */
+    -fx-control-inner-background: #f4f4f4;  /* Set background color */
+    -fx-border-color: #d0d0d0; /* Set border color */
+    -fx-border-width: 1px;     /* Set border width */
+    -fx-border-radius: 5px;    /* Set border radius for rounded corners */
+    -fx-padding: 5px;          /* Set padding */
+}
+#Selected-Button{
+    -fx-background-color: #D7BA89; /* Darker green on hover */
+    -fx-cursor: hand; /* Change cursor to a hand */
+}
+#paneWood{
+    -fx-background-color: #986B41; /* Darker green on hover */
+}
+/* Add this CSS to your FXML file or a separate CSS file */
+
+.table-view {
+    -fx-background-color: #D7BA89; /* Set the background color of the TableView */
+
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #986B41; /* Set the background color of the header */
+    -fx-text-fill: #00000; /* Set the text color of the header */
+    /*-fx-font-weight: bold; !* Set the font weight of the header *!*/
+}
+
+.table-row-cell {
+    -fx-background-color: #D7BA89; /* Set the background color of the rows */
+    -fx-font-size: 18px; /* Set the font size of the rows */
+    -fx-font-family: 'Segoe UI', Arial, sans-serif; /* Set the font family of the rows */
+
+}
+
+.table-row-cell:even {
+    -fx-background-color: #cdb183; /* Set the background color of even rows */
+
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #986B41; /* Set the background color of selected rows */
+    -fx-text-fill: #986B41; /* Set the text color of selected rows */
+}

@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Implemented MySQLReaderDAO methods">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" afterDir="false" />
+    <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Starting to mess with Scene Builder">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/BooksController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/LendingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/ReadersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Books.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Lending.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Readers.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/360_F_220293246_Ps6O4kTZ20IQCDwPGZqKLxdS8nRta5Dq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-avatar-64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-book-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-home-30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-home-60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-library-30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-library-60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-reader-64.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474/storage_v2/_src_/schema/library.uyToCQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474/storage_v2/_src_/schema/library.uyToCQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLReaderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Test.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -37,6 +56,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 6
     }</component>
@@ -50,6 +72,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.MySQLConnection.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -58,7 +81,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/java/com/example/bibliotheque_project/Models&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ahmed Amamou/IdeaProjects/Bibliotheque_Project/src/main/resources/com/example/bibliotheque_project/Views&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,16 +103,20 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project\Views" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\com\example\bibliotheque_project\Models" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\com\example\bibliotheque_project" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project\Views" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project" />
+      <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\resources\com\example\bibliotheque_project\Views" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java\Views\Home" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src\main\java" />
       <recent name="C:\Users\Ahmed Amamou\IdeaProjects\Bibliotheque_Project\src" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.bibliotheque_project.Controllers" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.bibliotheque_project" />
@@ -143,7 +171,13 @@
       <workItem from="1704619445319" duration="25000" />
       <workItem from="1704743590896" duration="1197000" />
       <workItem from="1705682663222" duration="689000" />
-      <workItem from="1705683366123" duration="2945000" />
+      <workItem from="1705683366123" duration="4373000" />
+      <workItem from="1705752129029" duration="11157000" />
+      <workItem from="1705831809453" duration="1518000" />
+      <workItem from="1705853779424" duration="14474000" />
+      <workItem from="1706031507471" duration="1105000" />
+      <workItem from="1706136547798" duration="1258000" />
+      <workItem from="1706437530255" duration="9336000" />
     </task>
     <task id="LOCAL-00001" summary="Organized Directory, Added Reader class related stuff">
       <option name="closed" value="true" />
@@ -161,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704235659120</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Starting to mess with Scene Builder">
+      <option name="closed" value="true" />
+      <created>1705689669277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705689669277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,9 +221,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Organized Directory, Added Reader class related stuff" />
     <MESSAGE value="Implemented MySQLReaderDAO methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented MySQLReaderDAO methods" />
+    <MESSAGE value="Starting to mess with Scene Builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting to mess with Scene Builder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

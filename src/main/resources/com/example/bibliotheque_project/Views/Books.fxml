@@ -3,7 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,16 +15,17 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="980.0" stylesheets="@../Styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque_project.Controllers.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="980.0" stylesheets="@../Styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque_project.Controllers.BooksController">
    <children>
       <ButtonBar layoutX="111.0" layoutY="55.0" prefHeight="40.0" prefWidth="200.0" />
       <BorderPane prefHeight="560.0" prefWidth="980.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: WHITE;" stylesheets="@../Styles/styles.css" BorderPane.alignment="CENTER">
                <children>
-                  <Pane id="paneWood" layoutX="118.0" layoutY="20.0" prefHeight="69.0" prefWidth="980.0" stylesheets="@../Styles/styles.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane layoutX="118.0" layoutY="20.0" prefHeight="69.0" prefWidth="980.0" style="-fx-background-color: #986b41;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="66.0" layoutY="-1.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -92,9 +95,9 @@
                         </Label>
                      </children>
                   </Pane>
-                  <HBox layoutX="188.0" prefHeight="69.0" prefWidth="792.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <HBox layoutX="188.0" prefHeight="66.0" prefWidth="792.0" spacing="5.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button id="Selected-Button" alignment="BOTTOM_CENTER" lineSpacing="2.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="167.0" styleClass="styled-button" text="Home" textAlignment="CENTER">
+                        <Button alignment="BOTTOM_CENTER" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#switchHomeScene" prefHeight="62.0" prefWidth="167.0" styleClass="styled-button" text="Home" textAlignment="CENTER">
                            <font>
                               <Font name="JetBrains Mono Medium" size="18.0" />
                            </font>
@@ -105,7 +108,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onMouseClicked="#switchBooksScene" prefHeight="63.0" prefWidth="176.0" styleClass="styled-button" text="Books" textAlignment="CENTER">
+                        <Button id="Selected-Button" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="63.0" prefWidth="176.0" styleClass="styled-button" text="Books" textAlignment="CENTER">
                            <font>
                               <Font name="JetBrains Mono Medium" size="18.0" />
                            </font>
@@ -116,12 +119,12 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onMouseClicked="#switchReadersScene" prefHeight="65.0" prefWidth="176.0" styleClass="styled-button" text="Readers" textAlignment="CENTER">
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onMouseClicked="#switchReadersScene" prefHeight="63.0" prefWidth="176.0" styleClass="styled-button" text="Readers" textAlignment="CENTER">
                            <font>
                               <Font name="JetBrains Mono Medium" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="34.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/icons8-avatar-64.png" />
                                  </image>
@@ -132,7 +135,7 @@
                               <Font name="JetBrains Mono Medium" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/icons8-reader-64.png" />
                                  </image>
@@ -145,19 +148,53 @@
             </AnchorPane>
          </top>
          <center>
-            <Pane prefHeight="502.0" prefWidth="979.0" style="-fx-background-color: #D7BA89;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cdb183; -fx-border-color: #986B41;" BorderPane.alignment="CENTER">
                <children>
-                  <TextArea editable="false" layoutX="14.0" layoutY="14.0" prefHeight="130.0" prefWidth="617.0" styleClass="text-area" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
-                  <ImageView fitHeight="189.0" fitWidth="307.0" layoutX="639.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="imagess">
-                     <image>
-                        <Image url="@../images/360_F_220293246_Ps6O4kTZ20IQCDwPGZqKLxdS8nRta5Dq.jpg" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="20.0" layoutY="169.0" prefHeight="26.0" prefWidth="180.0" text="Stats About The library:">
+                  <Button layoutX="77.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="29.0" prefWidth="148.0" text="ADD BOOK" textFill="#835616">
                      <font>
-                        <Font name="JetBrains Mono NL Regular" size="12.0" />
+                        <Font name="JetBrains Mono ExtraBold" size="15.0" />
+                     </font></Button>
+                  <TableView fx:id="bookTableView" layoutX="360.0" layoutY="-1.0" prefHeight="493.0" prefWidth="620.0" style="-fx-background-color: #cdb183; -fx-border-color: #986B41;">
+                    <columns>
+                       <TableColumn fx:id="idColumn" text="ID" />
+                       <TableColumn fx:id="titleColumn" prefWidth="115.0" text="Title" />
+                       <TableColumn fx:id="authorColumn" prefWidth="118.0" text="Author" />
+                       <TableColumn fx:id="isbnColumn" prefWidth="165.0" text="ISBN" />
+                       <TableColumn fx:id="copiesAvailableColumn" minWidth="0.0" prefWidth="166.0" text="Copies Available" />
+
+                    </columns>
+                  </TableView>
+                  <TextField id="titleTextField" fx:id="titleTextField" layoutX="111.0" layoutY="68.0" />
+                  <Label layoutX="27.0" layoutY="28.0" text="ADD A NEW BOOK HERE:">
+                     <font>
+                        <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
                      </font>
                   </Label>
+                  <Label layoutX="32.0" layoutY="68.0" text="Title">
+                     <font>
+                        <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="authorTextField" fx:id="authorTextField" layoutX="111.0" layoutY="112.0" />
+                  <Label layoutX="27.0" layoutY="112.0" text="Author">
+                     <font>
+                        <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="isbnTextField" fx:id="isbnTextField" layoutX="111.0" layoutY="161.0" />
+                  <Label layoutX="27.0" layoutY="161.0" text="ISBN">
+                     <font>
+                        <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="copiesTextField" fx:id="copiesTextField" text="1" layoutX="111.0" layoutY="207.0" />
+                  <Label layoutX="27.0" layoutY="207.0" text="Copies">
+                     <font>
+                        <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endY="424.0" layoutX="360.0" layoutY="68.0" startY="-68.70709228515625" />
+                  <Line endX="699.9999389648438" endY="-27.0" layoutX="280.0" layoutY="28.0" startX="-280.0" startY="-28.0" />
                </children>
             </Pane>
          </center>

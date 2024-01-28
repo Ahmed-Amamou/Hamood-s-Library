@@ -1,33 +1,79 @@
+/*
+ * Copyright (c) 2024. made by Ahmed AMAMOU.
+ */
+
 package com.example.bibliotheque_project.Controllers;
 
+import com.example.bibliotheque_project.DAO.MySQLReaderDAO;
 import com.example.bibliotheque_project.HelloApplication;
+import com.example.bibliotheque_project.Models.Reader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
-public class HomeController {
-
-    @FXML
-    private Text textIN;
+public class ReadersController {
 
     @FXML
-    private TextField textOUT;
+    private TableView<Reader> readerTableView;
 
     @FXML
-    void overwrite(MouseEvent event) {
-        textIN.setText(textOUT.getText());
+    private TableColumn<Reader, Number> idColumn;
 
+    @FXML
+    private TableColumn<Reader, String> firstNameColumn;
+
+    @FXML
+    private TableColumn<Reader, String> lastNameColumn;
+
+    @FXML
+    private TableColumn<Reader, String> emailColumn;
+    @FXML
+    private TextField firstNameTextField;
+
+    @FXML
+    private TextField lastNameTextField;
+
+    @FXML
+    private TextField emailTextField;
+
+    private final MySQLReaderDAO readerDAO = new MySQLReaderDAO();
+    @FXML
+    public void handleAddReader() {
+        String firstName = firstNameTextField.getText();
+        String lastName = lastNameTextField.getText();
+        String email = emailTextField.getText();
+        Reader reader = new Reader(firstName, lastName, email);
+        readerDAO.addReader(reader);
+        loadReaders();
     }
+
+    @FXML
+    public void initialize() {
+        idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty());
+        firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+        lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+        emailColumn.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
+
+        loadReaders();
+    }
+
+    private void loadReaders() {
+        List<Reader> readers = readerDAO.findAllReaders();
+        readerTableView.getItems().setAll(readers);
+    }
+
     @FXML
     void switchBooksScene(MouseEvent event) {
-        System.out.println("Switching to books scene");
+        System.out.println("Switching to Book scene");
         try {
             // Load the new FXML file
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Views/Books.fxml"));
@@ -37,34 +83,6 @@ public class HomeController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-
-            // Show the new stage
-            stage.show();
-
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
-            stage.setResizable(false);
-            stage.setTitle("Hamood's Library");
-
-
-            // Close the current stage (optional)
-            ((Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow()).close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle the exception (e.g., show an error message)
-        }
-    }
-    @FXML
-    void switchReadersScene(MouseEvent event) {
-        System.out.println("Switching to books scene");
-        try {
-            // Load the new FXML file
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Views/Readers.fxml"));
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("Views/Books.fxml"));
-            Parent root = loader.load();
-
-            // Create a new stage
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
             stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
@@ -77,10 +95,11 @@ public class HomeController {
             e.printStackTrace();
             // Handle the exception (e.g., show an error message)
         }
+
     }
     @FXML
     void switchLendingScene(MouseEvent event) {
-        System.out.println("Switching to books scene");
+        System.out.println("Switching to Lending scene");
         try {
             // Load the new FXML file
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Views/Lending.fxml"));
@@ -93,7 +112,6 @@ public class HomeController {
             stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
-
             // Show the new stage
             stage.show();
 
@@ -103,6 +121,34 @@ public class HomeController {
             e.printStackTrace();
             // Handle the exception (e.g., show an error message)
         }
+
     }
+    @FXML
+    void switchHomeScene(MouseEvent event) {
+        System.out.println("Switching to Home scene");
+        try {
+            // Load the new FXML file
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Views/Home.fxml"));
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("Views/Books.fxml"));
+            Parent root = loader.load();
+
+            // Create a new stage
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.setResizable(false);
+            stage.setTitle("Hamood's Library");
+            // Show the new stage
+            stage.show();
+
+            // Close the current stage (optional)
+            ((Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow()).close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception (e.g., show an error message)
+        }
+
+    }
+
 
 }

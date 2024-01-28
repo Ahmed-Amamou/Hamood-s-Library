@@ -25,14 +25,48 @@ public class MySQLBookDAO implements BookDAO{
             if (resultSet.next()) {
                 String title = resultSet.getString("title");
                 String author = resultSet.getString("author");
-                int ISBN = resultSet.getInt("ISBN");
-                int copies = resultSet.getInt("copies");
+                String ISBN = resultSet.getString("ISBN");
+                int copies = resultSet.getInt("copies_available");
                 book = new Book(id, author, title,  ISBN, copies);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return book;
+    }
+    @Override
+    public Book findBookByISBN(String ISBN) {
+        Book book = null;
+        String query = "SELECT * FROM book WHERE ISBN = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, ISBN);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String title = resultSet.getString("title");
+                String author = resultSet.getString("author");
+                int copies = resultSet.getInt("copies_available");
+                book = new Book(id, author, title,  ISBN, copies);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book;
+    }
+    @Override
+    public boolean bookExists(String isbn) {
+        String query = "SELECT COUNT(*) FROM book WHERE ISBN = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, isbn);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int count = resultSet.getInt(1);
+                return count > 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     @Override
@@ -45,8 +79,8 @@ public class MySQLBookDAO implements BookDAO{
                 int id = resultSet.getInt("id");
                 String title = resultSet.getString("title");
                 String author = resultSet.getString("author");
-                int ISBN = resultSet.getInt("ISBN");
-                int copies = resultSet.getInt("copies");
+                String ISBN = resultSet.getString("ISBN");
+                int copies = resultSet.getInt("copies_available");
                 books.add(new Book(id, title, author, ISBN, copies));
             }
 
@@ -65,17 +99,17 @@ public class MySQLBookDAO implements BookDAO{
         //and when we insert a book we don't know if it exists or not
         //Q:argument that id and isbn here are the same ?
         //A:two books with the same title and author don't always have the same ISBN
-        Book book1 = findBookById(book.getId());
+        Book book1 = findBookByISBN(book.getISBN());
         if(book1 != null){
-            increaseCopies(book.getId(), book.getCopies());
+            increaseCopies(book.getISBN(), book.getCopiesAvailable());
         }else{
-            String query = "INSERT INTO book (id, title, author, ISBN, copies) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO book (id, title, author, ISBN, copies_available) VALUES (?, ?, ?, ?, ?)";
             try(PreparedStatement preparedStatement = connection.prepareStatement(query)){
                 preparedStatement.setInt(1, book.getId());
                 preparedStatement.setString(2, book.getTitle());
                 preparedStatement.setString(3, book.getAuthor());
-                preparedStatement.setInt(4, book.getISBN());
-                preparedStatement.setInt(5, book.getCopies());
+                preparedStatement.setString(4, book.getISBN());
+                preparedStatement.setInt(5, book.getCopiesAvailable());
                 preparedStatement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -85,12 +119,12 @@ public class MySQLBookDAO implements BookDAO{
 
     @Override
     public void updateBook(Book book) {
-        String query = "UPDATE book SET title = ?, author = ?, ISBN = ?, copies = ? WHERE id = ?";
+        String query = "UPDATE book SET title = ?, author = ?, ISBN = ?, copies_available = ? WHERE id = ?";
         try(PreparedStatement preparedStatement = connection.prepareStatement(query)){
             preparedStatement.setString(1, book.getTitle());
             preparedStatement.setString(2, book.getAuthor());
-            preparedStatement.setInt(3, book.getISBN());
-            preparedStatement.setInt(4, book.getCopies());
+            preparedStatement.setString(3, book.getISBN());
+            preparedStatement.setInt(4, book.getCopiesAvailable());
             preparedStatement.setInt(5, book.getId());
             preparedStatement.executeUpdate();
         }
@@ -114,12 +148,12 @@ public class MySQLBookDAO implements BookDAO{
     }
 
     @Override
-    public void increaseCopies(int bookId, int count) {
-        String query = "UPDATE Book SET copies_available = copies_available + ? WHERE id = ?";
+    public void increaseCopies(String bookISBN, int count) {
+        String query = "UPDATE Book SET copies_available = copies_available + ? WHERE isbn = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, count);
-            statement.setInt(2, bookId);
+            statement.setString(2, bookISBN);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace(); // Handle or log the exception
@@ -127,12 +161,12 @@ public class MySQLBookDAO implements BookDAO{
     }
 
     @Override
-    public void decreaseCopies(int bookId, int count) {
+    public void decreaseCopies(String bookISBN, int count) {
         String query = "UPDATE Book SET copies_available = GREATEST(copies_available - ?, 0) WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, count);
-            statement.setInt(2, bookId);
+            statement.setString(2, bookISBN);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace(); // Handle or log the exception
