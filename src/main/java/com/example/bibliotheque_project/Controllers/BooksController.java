@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -67,6 +68,7 @@ public class BooksController {
         if (bookExists) {
             // Update the existing book with increased copies
             bookDAO.increaseCopies(isbn, copies);
+            bookDAO.showAlert("Book already exists, increased the number of copies", Alert.AlertType.INFORMATION);
         } else {
             // Create a new Book object and add it to the database
             Book newBook = new Book(0, title, author, isbn, copies);
@@ -112,7 +114,7 @@ public class BooksController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
 
@@ -140,7 +142,7 @@ public class BooksController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
             // Show the new stage
@@ -167,7 +169,7 @@ public class BooksController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
             // Show the new stage

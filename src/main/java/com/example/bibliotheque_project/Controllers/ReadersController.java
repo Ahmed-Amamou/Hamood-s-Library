@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -51,9 +52,19 @@ public class ReadersController {
         String firstName = firstNameTextField.getText();
         String lastName = lastNameTextField.getText();
         String email = emailTextField.getText();
-        Reader reader = new Reader(firstName, lastName, email);
-        readerDAO.addReader(reader);
-        loadReaders();
+        Reader reader = new Reader(0,firstName, lastName, email);
+        if(readerDAO.readerExists(email)) {
+            readerDAO.showAlert("Reader with the same email already exists", Alert.AlertType.ERROR);
+            return;
+             }
+        else {
+            readerDAO.insertReader(reader);
+            loadReaders();
+        }
+
+
+
+
     }
 
     @FXML
@@ -83,7 +94,7 @@ public class ReadersController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
             // Show the new stage
@@ -109,7 +120,7 @@ public class ReadersController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
             // Show the new stage
@@ -135,7 +146,7 @@ public class ReadersController {
             // Create a new stage
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+            stage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
             stage.setResizable(false);
             stage.setTitle("Hamood's Library");
             // Show the new stage

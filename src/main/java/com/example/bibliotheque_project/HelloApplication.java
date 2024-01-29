@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
         primaryStage.setResizable(false);
         primaryStage.getFullScreenExitHint();
 //        I want to give this window an icon
-        primaryStage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/pain.png"));
+        primaryStage.getIcons().add(new javafx.scene.image.Image("file:src/main/resources/com/example/bibliotheque_project/images/book.png"));
         primaryStage.show();
 
     }

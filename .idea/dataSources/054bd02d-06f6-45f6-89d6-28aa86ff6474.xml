@@ -1028,12 +1028,12 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="289" parent="1" name="library">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-01-28.18:14:57</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-29.10:06:19</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="mysql">
       <Grants>user|||mysql.session|localhost|SELECT|G</Grants>
-      <LastIntrospectionLocalTimestamp>2024-01-28.18:14:57</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-29.10:06:19</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="performance_schema">
@@ -1425,7 +1425,7 @@ stats_persistent
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
     <column id="345" parent="300" name="id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1554,8 +1554,8 @@ stats_persistent
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="370" parent="302" name="book_id">
-      <DasType>int|0s</DasType>
+    <column id="370" parent="302" name="book_isbn">
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
     <column id="371" parent="302" name="transaction_type">
@@ -1573,8 +1573,8 @@ stats_persistent
       <RefTableName>reader</RefTableName>
     </foreign-key>
     <foreign-key id="374" parent="302" name="transactions_ibfk_2">
-      <ColNames>book_id</ColNames>
-      <RefColNames>id</RefColNames>
+      <ColNames>book_isbn</ColNames>
+      <RefColNames>isbn</RefColNames>
       <RefTableName>book</RefTableName>
     </foreign-key>
     <index id="375" parent="302" name="PRIMARY">
@@ -1586,8 +1586,8 @@ stats_persistent
       <ColNames>reader_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="377" parent="302" name="book_id">
-      <ColNames>book_id</ColNames>
+    <index id="377" parent="302" name="book_isbn">
+      <ColNames>book_isbn</ColNames>
       <Type>btree</Type>
     </index>
     <key id="378" parent="302" name="PRIMARY">

@@ -5,33 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="283f2a56-e999-4e2f-ba75-bce40c5b737d" name="Changes" comment="Starting to mess with Scene Builder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/BooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/LendingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/ReadersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Styles/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Books.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Lending.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Readers.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/360_F_220293246_Ps6O4kTZ20IQCDwPGZqKLxdS8nRta5Dq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-avatar-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-book-26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-home-30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-home-60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-library-30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-library-60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/icons8-reader-64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLTransactionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/TransactionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/TransactionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/images/thankyou.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474/storage_v2/_src_/schema/library.uyToCQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/054bd02d-06f6-45f6-89d6-28aa86ff6474/storage_v2/_src_/schema/library.uyToCQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/BooksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/LendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/LendingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/ReadersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Controllers/ReadersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLBookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/MySQLReaderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/ReaderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/DAO/ReaderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bibliotheque_project/Models/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Books.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Books.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Lending.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Lending.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Readers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bibliotheque_project/Views/Readers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +44,7 @@
         <option value="Interface" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -177,7 +173,8 @@
       <workItem from="1705853779424" duration="14474000" />
       <workItem from="1706031507471" duration="1105000" />
       <workItem from="1706136547798" duration="1258000" />
-      <workItem from="1706437530255" duration="9336000" />
+      <workItem from="1706437530255" duration="16966000" />
+      <workItem from="1706518003002" duration="6599000" />
     </task>
     <task id="LOCAL-00001" summary="Organized Directory, Added Reader class related stuff">
       <option name="closed" value="true" />

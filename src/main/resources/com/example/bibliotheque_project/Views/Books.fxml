@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="980.0" stylesheets="@../Styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque_project.Controllers.BooksController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="980.0" stylesheets="@../Styles/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bibliotheque_project.Controllers.BooksController">
    <children>
       <ButtonBar layoutX="111.0" layoutY="55.0" prefHeight="40.0" prefWidth="200.0" />
       <BorderPane prefHeight="560.0" prefWidth="980.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -187,7 +187,7 @@
                         <Font name="JetBrains Mono NL ExtraBold" size="18.0" />
                      </font>
                   </Label>
-                  <TextField id="copiesTextField" fx:id="copiesTextField" text="1" layoutX="111.0" layoutY="207.0" />
+                  <TextField id="copiesTextField" fx:id="copiesTextField" layoutX="111.0" layoutY="207.0" text="1" />
                   <Label layoutX="27.0" layoutY="207.0" text="Copies">
                      <font>
                         <Font name="JetBrains Mono NL ExtraBold" size="18.0" />

@@ -5,13 +5,14 @@
 package com.example.bibliotheque_project.DAO;
 import com.example.bibliotheque_project.Models.Book;
 import com.example.bibliotheque_project.Connections.MySQLConnection;
+import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MySQLBookDAO implements BookDAO{
     private Connection connection = MySQLConnection.getConnection();
@@ -52,6 +53,12 @@ public class MySQLBookDAO implements BookDAO{
             e.printStackTrace();
         }
         return book;
+    }
+    public void showAlert(String message, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
     @Override
     public boolean bookExists(String isbn) {
@@ -133,6 +140,34 @@ public class MySQLBookDAO implements BookDAO{
         }
 
     }
+    @Override
+    public int getBookCount() {
+        String query = "SELECT COUNT(*) FROM book";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0; // Return 0 if an error occurs
+    }
+    @Override
+    public boolean hasBorrowedBook(int readerId, String bookISBN) {
+        String query = "SELECT * FROM transactions WHERE reader_id = ? AND book_ISBN = ? AND return_date IS NULL";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, readerId);
+            preparedStatement.setString(2, bookISBN);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            return resultSet.next(); // Returns true if there's at least one row (book is borrowed)
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the exception as needed
+            return false; // Assume an error, change this logic based on your error handling approach
+        }
+    }
 
     @Override
     public void deleteBook(int id) {
@@ -145,6 +180,23 @@ public class MySQLBookDAO implements BookDAO{
         catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public Map<String, String> getAllBookTitlesAndISBNs() {
+        Map<String, String> bookTitlesAndISBNs = new HashMap<>();
+        bookTitlesAndISBNs.put("ISBN", "title");
+        String query = "SELECT title, ISBN FROM book";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String title = resultSet.getString("title");
+                String ISBN = resultSet.getString("ISBN");
+                bookTitlesAndISBNs.put(ISBN, title);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the exception as needed
+        }
+        return bookTitlesAndISBNs;
     }
 
     @Override
@@ -162,7 +214,7 @@ public class MySQLBookDAO implements BookDAO{
 
     @Override
     public void decreaseCopies(String bookISBN, int count) {
-        String query = "UPDATE Book SET copies_available = GREATEST(copies_available - ?, 0) WHERE id = ?";
+        String query = "UPDATE Book SET copies_available = GREATEST(copies_available - ?, 0) WHERE isbn = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, count);
@@ -172,4 +224,5 @@ public class MySQLBookDAO implements BookDAO{
             e.printStackTrace(); // Handle or log the exception
         }
     }
+
 }
